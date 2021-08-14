@@ -1,0 +1,5 @@
+ * add more api options
+ * support streaming
+ * support for doing completions with related code added to prompt (crawling AST or adding via FS?)
+ * support adding and switching between stop sequences
+ * support transforming/replacing selection (lots of processes potentially here to support)

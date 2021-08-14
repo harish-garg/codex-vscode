@@ -1,0 +1,86 @@
+{
+  "name": "codex-vscode",
+  "description": "vscode extension for GPT3/openai powered code completions.",
+  "version": "0.1.0",
+  "publisher": "implicate.dev",
+  "activationEvents": [
+    "onCommand:extension.CodexComplete"
+  ],
+  "engines": {
+    "vscode": "^1.1.37"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.CodexComplete",
+        "title": "Complete with OpenAI Codex"
+      }
+    ],
+    "configuration": {
+      "title": "Codex",
+      "properties": {
+        "codex.engine": {
+          "type": "string",
+          "default": "davinci-codex",
+          "enum": [
+            "davinci",
+            "davinci-codex",
+            "ada"
+          ],
+          "enumDescriptions": [
+            "Davinci",
+            "Davinci Codex",
+            "Ada"
+          ],
+          "description": "The engine to use for codex"
+        },
+        "codex.temperature": {
+          "type": "number",
+          "default": 0,
+          "description": "The temperature to use for codex"
+        },
+        "codex.maxTokens": {
+          "type": "number",
+          "default": 50,
+          "description": "The max tokens to use for codex"
+        },
+        "codex.topP": {
+          "type": "number",
+          "default": 1,
+          "description": "The top p to use for codex"
+        },
+        "codex.frequencyPenalty": {
+          "type": "number",
+          "default": 0,
+          "description": "The frequency penalty to use for codex"
+        },
+        "codex.presencePenalty": {
+          "type": "number",
+          "default": 0,
+          "description": "The presence penalty to use for codex"
+        },
+        "codex.apiKey": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "The api key to use for codex"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "parcel ./src/extension.ts -t node",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "openai-api": "git+https://github.com/Sureiya/openai-api.git#patch-1",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.2.2",
+    "vscode": "^1.1.37"
+  }
+}

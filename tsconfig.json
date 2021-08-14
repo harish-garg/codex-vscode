@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+    "outDir": "./out",
+		"target": "es2019",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+    "strict": true,
+		"lib": ["es2019"],
+		"noImplicitAny": true,
+		"suppressImplicitAnyIndexErrors": true,
+    "rootDir": "src",
+		"allowJs": true,
+    // Generate d.ts files
+    "declaration": true,
+	},
+	"include": [
+		"./src/**/*",
+    "./src/*"
+	],
+  "outDir": "./out",
+  "exclude": ["node_modules", ".vscode-test"]
+}

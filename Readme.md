@@ -1,4 +1,4 @@
-****vscode-codex
+vscode-codex
 ============
 
 Adds a Codex completion command using the OpenAI codex API. 
@@ -11,7 +11,7 @@ Pull Requests welcome
 
 ## Installation
 
-Outside of development, install from the VSCode Extension Marketplace.
+Outside of development, install from the [VSCode Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=implicate-dev.codex-vscode).
 
 For development, clone this repository and symlink the folder to ~/.vscode/extensions/codex-vscode or compile/run install_dev.go
 

@@ -2,17 +2,17 @@
   "name": "codex-vscode",
   "description": "vscode extension for GPT3/openai powered code completions.",
   "version": "0.1.0",
-  "publisher": "implicate.dev",
+  "publisher": "implicate-dev",
   "repository": "https://github.com/Implicate-dev/codex-vscode",
   "activationEvents": [
     "onCommand:extension.CodexComplete"
   ],
   "engines": {
-    "vscode": "^1.1.37"
+    "vscode": "^1.1.0"
   },
   "author": "Chris Modjeska <chris@implicate.dev>",
   "contributors": ["OpenAI Codex (beta.openai.com)"],
-  "license": "See LICENSE",
+  "license": "MIT",
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -76,8 +76,9 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "parcel ./src/extension.ts -t node",
+    "vscode:prepublish": "npm run build",
+    "watch": "parcel ./src/extension.ts -t node",
+    "build": "parcel build ./src/extension.ts -t node",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "devDependencies": {
